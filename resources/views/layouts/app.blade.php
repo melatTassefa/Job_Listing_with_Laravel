@@ -69,5 +69,7 @@
         menu.classList.toggle('hidden');
     });
 </script>
+
+@yield('content')
 </body>
 </html>
