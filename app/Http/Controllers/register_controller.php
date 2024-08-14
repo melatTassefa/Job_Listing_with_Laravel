@@ -41,7 +41,7 @@ class register_controller extends Controller
         ]);
 
         // Attempt to log the user in
-        // auth()->attempt($request->only('email', 'password'));
+        auth()->attempt($request->only('email', 'password'));
 
         // // Redirect to the dashboard or another page
         // return redirect()->route('dashboard');
