@@ -7,7 +7,8 @@
     @vite('resources/css/app.css')
     <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->
 </head>
-<body class="bg-gray-900">
+<body>
+
     @vite('resources/js/app.js')
     <!-- resources/views/layouts/navbar.blade.php -->
 
@@ -17,7 +18,7 @@
             <!-- Logo -->
             <div class="flex space-x-4">
                 <a href="#" class="flex items-center py-5 px-2 text-gray-700">
-                    <img src="{{ asset('path_to_your_logo/logo.png') }}" alt="Logo" class="h-8 w-8 mr-2">
+                    <img src="resources/images/logo.jpg" alt="Logo" class="h-8 w-8 mr-2">
                     <span class="font-bold text-lg">Job FInder</span>
                 </a>
             </div>
@@ -69,5 +70,6 @@
         menu.classList.toggle('hidden');
     });
 </script>
+@yield('content')
 </body>
 </html>
