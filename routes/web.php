@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\controllers\login_controller;
+use App\http\controllers\register_controller;
+use App\http\controllers\logout_controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,16 @@ use App\http\controllers\login_controller;
 |
 */
 
+
+Route::get('/',function () {
+    return view('layouts.app');
+})->name('layouts.app');
+
+
 Route::get('/login',[login_controller::class,'index'])->name('login');
 Route::post('/login',[login_controller::class,'store']);
+
+Route::get('/register',[register_controller::class,'index'])->name('register');
+Route::post('/register',[register_controller::class,'store']);
+
+Route::post('/logout',[logout_controller::class,'store'])->name('logout');

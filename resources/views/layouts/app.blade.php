@@ -34,8 +34,9 @@
 
             <!-- Secondary Nav -->
             <div class="hidden md:flex items-center space-x-1">
-                <a href="#" class="py-2 px-3 bg-pink-500 text-white rounded hover:bg-pink-700">Register</a>
-                <a href="#" class="py-2 px-3 border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white">Login</a>
+                <a href="{{ route('register') }}" class="py-2 px-3 bg-pink-500 text-white rounded hover:bg-pink-700">Register</a>
+                <a href="{{ route('login') }}" class="py-2 px-3 border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white">Login</a>
+                <a href="{{ route('logout') }}" class="py-2 px-3 border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white">Logout</a>
             </div>
 
             <!-- Mobile Button -->
@@ -70,6 +71,9 @@
         menu.classList.toggle('hidden');
     });
 </script>
+
+
+
 @yield('content')
 </body>
 </html>
