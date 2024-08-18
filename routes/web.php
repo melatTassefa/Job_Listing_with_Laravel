@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\job_post_controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::get('/', function () {
 Route::get('/app', function () {
     return view('layouts.app');
 });
+Route::get('/add', [job_post_controller::class, 'add_post'])->name('add_job');

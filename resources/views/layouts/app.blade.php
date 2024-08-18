@@ -60,6 +60,7 @@
         <a href="#" class="block py-2 px-4 text-sm border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white">Login</a>
     </div>
 </nav>
+@yield('content');
 
 <script>
     const btn = document.querySelector('button.mobile-menu-button');
