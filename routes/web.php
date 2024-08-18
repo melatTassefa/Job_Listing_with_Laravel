@@ -20,8 +20,11 @@ use App\http\controllers\logout_controller;
 
 Route::get('/',function () {
     return view('layouts.app');
-})->name('layouts.app');;
+})->name('layouts.app');
+Route::get('/dashboard', [job_post_controller::class, 'show_post'])->name('dashboard');
 Route::get('/add', [job_post_controller::class, 'add_post'])->name('add_job');
+Route::post('/add', [job_post_controller::class, 'store_post'])->name('store_job');
+
 Route::get('/login',[login_controller::class,'index'])->name('login');
 Route::post('/login',[login_controller::class,'store']);
 

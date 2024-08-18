@@ -15,7 +15,7 @@ class register_controller extends Controller
 
     public function store(Request $request)
     {
-        
+
         $this->validate($request, [
             'First_name' => 'required|string|max:50',
             'last_name' => 'required|string|max:50',
@@ -44,7 +44,7 @@ class register_controller extends Controller
         auth()->attempt($request->only('email', 'password'));
 
         // // Redirect to the dashboard or another page
-        // return redirect()->route('dashboard');
+        return redirect()->route('add_job');
     }
 }
 
