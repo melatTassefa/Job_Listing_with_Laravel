@@ -22,9 +22,6 @@ Route::get('/',function () {
     return view('layouts.app');
 })->name('layouts.app');;
 Route::get('/add', [job_post_controller::class, 'add_post'])->name('add_job');
-
-
-
 Route::get('/login',[login_controller::class,'index'])->name('login');
 Route::post('/login',[login_controller::class,'store']);
 
