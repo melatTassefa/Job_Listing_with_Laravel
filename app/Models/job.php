@@ -15,6 +15,7 @@ class job extends Model
         'job_salary',
         'job_deadline',
         'job_required_qualification',
+        'user_id'
         //'job_type_id'
         //'job_field_id'
     ];

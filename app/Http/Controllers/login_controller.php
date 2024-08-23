@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Hash;
 
 class login_controller extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['guest']);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware(['guest']);
+    // }
     public function index(){
 
 
@@ -26,6 +26,7 @@ class login_controller extends Controller
 
 
         ]);
+
        //if(!auth()->attempt($request->only('email','password'),$request->remember)){
         //return back()->with('status','invalid login details');
        //}

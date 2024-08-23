@@ -11,8 +11,8 @@ class logout_controller extends Controller
     public function store(){
 
         auth()->logout();
-     
-        return redirect()->route('layouts.app');
-        
+
+        return view('layouts.app');
+
         }
 }

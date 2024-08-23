@@ -25,7 +25,7 @@
 
             <!-- Primary Nav -->
             <div class="hidden md:flex items-center space-x-1">
-                <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
+                <a href="/" class="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
                 <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Find a Jobs</a>
                 <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">About</a>
                 <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Page</a>
@@ -35,7 +35,7 @@
             <!-- Secondary Nav -->
             <div class="hidden md:flex items-center space-x-1">
                 <a href="{{ route('register') }}" class="py-2 px-3 bg-pink-500 text-white rounded hover:bg-pink-700">Register</a>
-                <a href="{{ route('login') }}" class="py-2 px-3 border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white">Login</a>
+                <a href="{{route('login')}}" class="py-2 px-3 border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white">Login</a>
                 <a href="{{ route('logout') }}" class="py-2 px-3 border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white">Logout</a>
             </div>
 

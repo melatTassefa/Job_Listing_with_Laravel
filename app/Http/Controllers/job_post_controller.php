@@ -35,6 +35,7 @@ class job_post_controller extends Controller
         $job->job_salary = $request->job_salary;
         $job->job_deadline = $request->job_deadline;
         $job->job_required_qualification = $request->job_required_qualification;
+        $job->user_id = auth()->user()->id;
         $job->save();
         return redirect()->route('dashboard');
     }

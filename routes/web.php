@@ -19,8 +19,8 @@ use App\http\controllers\logout_controller;
 
 
 Route::get('/',function () {
-    return view('layouts.app');
-})->name('layouts.app');
+    return view('layouts.home');
+})->name('layouts.home');
 Route::get('/dashboard', [job_post_controller::class, 'show_post'])->name('dashboard');
 Route::get('/add', [job_post_controller::class, 'add_post'])->name('add_job');
 Route::post('/add', [job_post_controller::class, 'store_post'])->name('store_job');
@@ -31,5 +31,5 @@ Route::post('/login',[login_controller::class,'store']);
 Route::get('/register',[register_controller::class,'index'])->name('register');
 Route::post('/register',[register_controller::class,'store']);
 
-Route::post('/logout',[logout_controller::class,'store'])->name('logout');
+Route::get('/logout',[logout_controller::class,'store'])->name('logout');
 

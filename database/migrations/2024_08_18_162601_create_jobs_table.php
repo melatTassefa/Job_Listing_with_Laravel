@@ -20,6 +20,8 @@ return new class extends Migration
             $table->date('job_deadline');
             $table->string('job_required_qualification');
             $table->timestamps();
+            //ADDED
+            //$table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 
