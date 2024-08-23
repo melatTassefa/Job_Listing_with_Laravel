@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-@auth
+
 <form action="{{route('store_job')}}" method="POST">
     @csrf
 <div class="space-y-12">
@@ -61,5 +61,5 @@
     </div>
 </div>
 </form>
-@endauth
+
 @endsection

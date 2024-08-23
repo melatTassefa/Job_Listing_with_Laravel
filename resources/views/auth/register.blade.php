@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="flex justify-center items-center min-h-screen bg-gray-100">
-    <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
+    <div class="w-full max-w-lg bg-white p-8 rounded-lg mt-6 shadow-lg">
         <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Create an Account</h2>
         <form action="{{ route('register') }}" method="post">
             @csrf
