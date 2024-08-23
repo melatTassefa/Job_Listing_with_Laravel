@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\job_post_controller;
-use App\http\controllers\login_controller;
+use App\http\controllers\LoginController;
 use App\http\controllers\register_controller;
 use App\http\controllers\logout_controller;
 
@@ -19,14 +19,16 @@ use App\http\controllers\logout_controller;
 
 
 Route::get('/',function () {
-    return view('layouts.home');
-})->name('layouts.home');
+    return view('jobs.home');
+})->name('jobs.home');
+
+
 Route::get('/dashboard', [job_post_controller::class, 'show_post'])->name('dashboard');
 Route::get('/add', [job_post_controller::class, 'add_post'])->name('add_job');
 Route::post('/add', [job_post_controller::class, 'store_post'])->name('store_job');
 
-Route::get('/login',[login_controller::class,'index'])->name('login');
-Route::post('/login',[login_controller::class,'store']);
+Route::get('/login',[LoginController::class,'index'])->name('login');
+Route::post('/login',[LoginController::class,'store']);
 
 Route::get('/register',[register_controller::class,'index'])->name('register');
 Route::post('/register',[register_controller::class,'store']);

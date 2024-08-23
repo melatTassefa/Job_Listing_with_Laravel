@@ -17,7 +17,7 @@ class job_post_controller extends Controller
     }
 
     public function verify_post(Request $request){
-        $this.validate($request,[
+        $this->validate($request,[
         'job_name'=>'required',
         'job_company'=>'required',
         'job_adress'=>'required',
