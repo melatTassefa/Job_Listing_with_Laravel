@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\job_field;
 use App\Models\job_type;
 use App\Models\job;
+use App\Models\User;
 
 class job_post_controller extends Controller
 {
     //TO BE EDITED, REMOVE $JOB_FIELDS AND USE MODEL TO FETCH DATA FROM JOB_FIELD TABLE
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function add_post(){
         $job_fields = job_field::all();
         $job_types = job_type::all();

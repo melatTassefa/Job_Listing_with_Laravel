@@ -12,7 +12,7 @@ class logout_controller extends Controller
 
         auth()->logout();
 
-        return view('layouts.app');
+        return view('jobs.home');
 
         }
 }

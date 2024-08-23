@@ -19,6 +19,7 @@ use App\http\controllers\logout_controller;
 
 
 Route::get('/',function () {
+    //dd('Loading jobs.home');
     return view('jobs.home');
 })->name('jobs.home');
 
